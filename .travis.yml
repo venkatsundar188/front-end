@@ -48,3 +48,24 @@ deploy:
 #   provider: gae
 #   keyfile: ...
 #   project: continuous-deployment-demo
+#   By default, Travis will only deploy from your master branch.You can also explicitly specify the branch to deploy from with the on option:
+#   on:
+#     all_branches: true
+#   on: production
+
+#   By default, when your application is deployed it will be promoted to receive all traffic. You can disable that using the no_promote option
+#   no_promote: true
+
+#   in a future Cloud SDK release, deployments that promote the new version to receive all traffic will stop the previous version by default
+#   no_stop_previous_version: true
+
+# #   skip_cleanup: true
+
+# Other Available Configuration Options #
+# project: Project ID used to identify the project on Google Cloud.
+# keyfile: Path to the JSON file containing your Service Account credentials in JSON Web Token format. To be obtained via the Google Developers Console. Defaults to "service-account.json". Note that this file should be handled with care as it contains authorization keys.
+# config: Path to your module configuration file. Defaults to "app.yaml". This file is runtime dependent (Go, Java, PHP, Python)
+# version: The version of the app that will be created or replaced by this deployment. If you do not specify a version, one will be generated for you. See gcloud app deploy
+# default: Flag to set the deployed version to be the default serving version. See gcloud app deploy
+# verbosity: Lets you adjust the verbosity when invoking "gcloud". Defaults to "warning". See gcloud.
+# docker_build: If deploying a Managed VM, specifies where to build your image. Typical values are "remote" to build on Google Cloud Engine and "local" which requires Docker to be set up properly (to utilize this on Travis CI, read Using Docker on Travis CI). Defaults to "remote".
