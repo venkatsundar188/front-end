@@ -43,3 +43,8 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+      
+# deploy:
+#   provider: gae
+#   keyfile: ...
+#   project: continuous-deployment-demo
